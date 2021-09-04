@@ -1,0 +1,96 @@
+@import "_paleta";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.formulario {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 0;
+  .ciudadContainer {
+    width: 80%;
+    height: auto;
+    position: relative;
+    .ciudadInput {
+      font-family: "Roboto", sans-serif;
+      color: $main-text-color;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 2% 1%;
+      border: none;
+      border-bottom: solid 2px $main-text-color;
+      outline: none;
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:valid ~ .labelCity {
+        span {
+          transform: translateY(-150%);
+        }
+      }
+      &:focus {
+        border-bottom: solid 2px $input-line;
+      }
+      &:focus ~ .labelCity {
+        span {
+          transform: translateY(-100%);
+        }
+      }
+    }
+    .labelCity {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      span {
+        position: absolute;
+        margin-left: 2%;
+        color: $main-text-color;
+        left: 0;
+        bottom: 5px;
+        transition: all 0.3s ease-in-out;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 42px;
+      }
+    }
+  }
+  .paisesInput {
+    width: 80%;
+    color: $main-text-color;
+    margin-top: 5%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px $main-text-color;
+    option {
+      color: $fondo-container;
+    }
+  }
+  .boton {
+    width: 70%;
+    color: $main-text-color;
+    margin-top: 5%;
+    border: none;
+    padding: 2% 0;
+    border-radius: 50px;
+    background-color: $submit-boton;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+  }
+}

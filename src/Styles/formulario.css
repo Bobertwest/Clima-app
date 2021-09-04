@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.formulario {
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2% 0;
+}
+
+.formulario .ciudadContainer {
+  width: 80%;
+  height: auto;
+  position: relative;
+}
+
+.formulario .ciudadContainer .ciudadInput {
+  font-family: "Roboto", sans-serif;
+  color: #fff5dd;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 2% 1%;
+  border: none;
+  border-bottom: solid 2px #fff5dd;
+  outline: none;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.formulario .ciudadContainer .ciudadInput:valid ~ .labelCity span {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+
+.formulario .ciudadContainer .ciudadInput:focus {
+  border-bottom: solid 2px #00d1ff;
+}
+
+.formulario .ciudadContainer .ciudadInput:focus ~ .labelCity span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.formulario .ciudadContainer .labelCity {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.formulario .ciudadContainer .labelCity span {
+  position: absolute;
+  margin-left: 2%;
+  color: #fff5dd;
+  left: 0;
+  bottom: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 42px;
+}
+
+.formulario .paisesInput {
+  width: 80%;
+  color: #fff5dd;
+  margin-top: 5%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 42px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: solid 2px #fff5dd;
+}
+
+.formulario .paisesInput option {
+  color: black;
+}
+
+.formulario .boton {
+  width: 70%;
+  color: #fff5dd;
+  margin-top: 5%;
+  border: none;
+  padding: 2% 0;
+  border-radius: 50px;
+  background-color: #1aaf8b;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+}
+/*# sourceMappingURL=formulario.css.map */
