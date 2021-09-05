@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Clima-app/static/css/main.e04a4ffe.chunk.css",
+    "main.js": "/Clima-app/static/js/main.4a4d634a.chunk.js",
+    "main.js.map": "/Clima-app/static/js/main.4a4d634a.chunk.js.map",
+    "runtime-main.js": "/Clima-app/static/js/runtime-main.169e852b.js",
+    "runtime-main.js.map": "/Clima-app/static/js/runtime-main.169e852b.js.map",
+    "static/js/2.d59cdc06.chunk.js": "/Clima-app/static/js/2.d59cdc06.chunk.js",
+    "static/js/2.d59cdc06.chunk.js.map": "/Clima-app/static/js/2.d59cdc06.chunk.js.map",
+    "index.html": "/Clima-app/index.html",
+    "static/css/main.e04a4ffe.chunk.css.map": "/Clima-app/static/css/main.e04a4ffe.chunk.css.map",
+    "static/js/2.d59cdc06.chunk.js.LICENSE.txt": "/Clima-app/static/js/2.d59cdc06.chunk.js.LICENSE.txt",
+    "static/media/Soleado.20e98a68.jpg": "/Clima-app/static/media/Soleado.20e98a68.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.169e852b.js",
+    "static/js/2.d59cdc06.chunk.js",
+    "static/css/main.e04a4ffe.chunk.css",
+    "static/js/main.4a4d634a.chunk.js"
+  ]
+}
