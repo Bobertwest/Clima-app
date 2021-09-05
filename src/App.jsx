@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { getName } from "country-list";
 import { TiWeatherSunny } from "react-icons/ti";
 import fondo from "../src/Imagenes/Soleado.jpg";
 import "../src/Styles/App.css";
@@ -41,6 +42,7 @@ function App() {
           parseInt(weatherResponse.main.temp_min) - 273.15
         ).toFixed(1),
         icon: weatherResponse.weather[0].icon,
+        pais: getName(weatherResponse.sys.country),
       });
       setLoad(false);
     }
@@ -81,7 +83,9 @@ function App() {
               )}
               {climaActual !== null ? (
                 <Fragment>
-                  <h4 className="lugar">{climaActual.Ciudad} - Panamá</h4>
+                  <h4 className="lugar">
+                    {climaActual.Ciudad} - {climaActual.pais}
+                  </h4>
                   <h1 className="climaActual">{climaActual.Templeratura}°C</h1>
                   <img
                     src={`http://openweathermap.org/img/w/${climaActual.icon}.png`}
