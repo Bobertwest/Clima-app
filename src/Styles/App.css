@@ -16,8 +16,8 @@ body,
 .App .fondoDePantalla {
   width: 100%;
   height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   -webkit-filter: blur(4px) brightness(50%);
           filter: blur(4px) brightness(50%);
   -webkit-transform: scale(1.1);
@@ -35,6 +35,17 @@ body,
   right: 0;
 }
 
+.App .containerMain .contanadorExteriorDeFormulario {
+  width: 100%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .App .containerMain .informacion {
   padding-top: 7%;
   width: 51%;
@@ -50,6 +61,45 @@ body,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.App .containerMain .informacion .errorCiudad {
+  color: black;
+  background-color: red;
+  width: 80%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  padding: 2% 0;
+}
+
+.App .containerMain .informacion .iconoClima {
+  font-size: 200px;
+  color: #fff5dd;
+  -webkit-animation: mymove infinite 10s linear;
+          animation: mymove infinite 10s linear;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes mymove {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .App .containerMain .informacion .lugar {
@@ -89,5 +139,71 @@ body,
   font-weight: normal;
   font-size: 36px;
   line-height: 42px;
+}
+
+.App .containerMain .informacion .contanadorInteriorDeFormulario {
+  width: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .App .containerMain .contanadorExteriorDeFormulario {
+    display: none;
+  }
+  .App .containerMain .informacion {
+    padding-top: 2%;
+    width: 100%;
+  }
+  .App .containerMain .informacion .contanadorInteriorDeFormulario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .App .containerMain .contanadorExteriorDeFormulario {
+    display: none;
+  }
+  .App .containerMain .informacion {
+    padding-top: 7%;
+    width: 100%;
+  }
+  .App .containerMain .informacion .lugar {
+    font-size: 18px;
+  }
+  .App .containerMain .informacion .climaActual {
+    font-size: 72px;
+    line-height: 72px;
+    padding: 0;
+  }
+  .App .containerMain .informacion .icono {
+    font-size: 25px;
+  }
+  .App .containerMain .informacion .temps p {
+    font-size: 18px;
+  }
+  .App .containerMain .informacion .contanadorInteriorDeFormulario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .App {
+    overflow-y: scroll;
+    height: auto;
+  }
+  .App .fondoDePantalla {
+    width: 100%;
+    height: inherit;
+  }
 }
 /*# sourceMappingURL=App.css.map */

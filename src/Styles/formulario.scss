@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 .formulario {
-  width: 49%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@
 
       &:valid ~ .labelCity {
         span {
-          transform: translateY(-150%);
+          transform: translateY(-100%);
         }
       }
       &:focus {
@@ -67,6 +67,7 @@
     width: 80%;
     color: $main-text-color;
     margin-top: 5%;
+    margin-bottom: 5%;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -80,10 +81,17 @@
       color: $fondo-container;
     }
   }
+  .errorMessage {
+    color: $error-color;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 2%;
+  }
   .boton {
     width: 70%;
     color: $main-text-color;
-    margin-top: 5%;
     border: none;
     padding: 2% 0;
     border-radius: 50px;
@@ -92,5 +100,31 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .formulario {
+    margin-top: 7%;
+    .ciudadContainer {
+      .labelCity {
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .paisesInput {
+      font-size: 18px;
+      margin-bottom: 10%;
+      option {
+        font-size: 18px;
+      }
+    }
+    .errorMessage {
+      font-size: 12px;
+    }
+    .boton {
+      font-size: 18px;
+    }
   }
 }

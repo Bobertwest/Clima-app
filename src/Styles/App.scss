@@ -14,7 +14,7 @@ body,
   .fondoDePantalla {
     width: 100%;
     height: inherit;
-    object-fit: cover;
+    object-fit: fill;
     filter: blur(4px) brightness(50%);
     transform: scale(1.1);
   }
@@ -25,6 +25,12 @@ body,
     position: absolute;
     top: 0;
     right: 0;
+    .contanadorExteriorDeFormulario {
+      width: 100%;
+      height: inherit;
+      display: flex;
+      align-items: center;
+    }
     .informacion {
       padding-top: 7%;
       width: 51%;
@@ -33,6 +39,29 @@ body,
       display: flex;
       flex-direction: column;
       align-items: center;
+      .errorCiudad {
+        color: $fondo-container;
+        background-color: red;
+        width: 80%;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        padding: 2% 0;
+      }
+      .iconoClima {
+        font-size: 200px;
+        color: $main-text-color;
+        animation: mymove infinite 10s linear;
+      }
+      @keyframes mymove {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
       .lugar {
         color: $main-text-color;
         font-family: "Roboto", sans-serif;
@@ -67,6 +96,74 @@ body,
           line-height: 42px;
         }
       }
+      .contanadorInteriorDeFormulario {
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    .containerMain {
+      .contanadorExteriorDeFormulario {
+        display: none;
+      }
+      .informacion {
+        padding-top: 2%;
+        width: 100%;
+
+        .contanadorInteriorDeFormulario {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .App {
+    .containerMain {
+      .contanadorExteriorDeFormulario {
+        display: none;
+      }
+      .informacion {
+        padding-top: 7%;
+        width: 100%;
+        .lugar {
+          font-size: 18px;
+        }
+        .climaActual {
+          font-size: 72px;
+          line-height: 72px;
+          padding: 0;
+        }
+        .icono {
+          font-size: 25px;
+        }
+        .temps {
+          p {
+            font-size: 18px;
+          }
+        }
+        .contanadorInteriorDeFormulario {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .App {
+    overflow-y: scroll;
+    height: auto;
+    .fondoDePantalla {
+      width: 100%;
+      height: inherit;
     }
   }
 }
